@@ -38,7 +38,7 @@ jobs:
       ARM_CLIENT_ID: "34878fb5-d326-48b0-b4cf-269651f4b945"
       ARM_TENANT_ID: "49d9d716-d5ad-40fa-9707-f8d27b7cd8c8"
       ARM_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
-      ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+      ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID || '990d8adf-a227-429c-918d-352714086c0e' }}
 
     steps:
       - name: Checkout Code
@@ -47,10 +47,7 @@ jobs:
       - name: Azure Login
         uses: azure/login@v2
         with:
-          client-id: "34878fb5-d326-48b0-b4cf-269651f4b945"
-          tenant-id: "49d9d716-d5ad-40fa-9707-f8d27b7cd8c8"
-          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-          client-secret: ${{ secrets.AZURE_CLIENT_SECRET }}
+          creds: '{"clientId":"34878fb5-d326-48b0-b4cf-269651f4b945","clientSecret":"${{ secrets.AZURE_CLIENT_SECRET }}","subscriptionId":"990d8adf-a227-429c-918d-352714086c0e","tenantId":"49d9d716-d5ad-40fa-9707-f8d27b7cd8c8"}'
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3

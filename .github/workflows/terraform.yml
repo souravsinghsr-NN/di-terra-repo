@@ -44,11 +44,13 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Azure Login (Client Secret Authentication)
+      - name: Azure Login
         uses: azure/login@v2
         with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
-        continue-on-error: true
+          client-id: "34878fb5-d326-48b0-b4cf-269651f4b945"
+          tenant-id: "49d9d716-d5ad-40fa-9707-f8d27b7cd8c8"
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          client-secret: ${{ secrets.AZURE_CLIENT_SECRET }}
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3

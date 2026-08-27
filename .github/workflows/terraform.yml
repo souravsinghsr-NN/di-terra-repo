@@ -34,16 +34,21 @@ jobs:
       run:
         working-directory: ./Envorment/Preprod
 
+    env:
+      ARM_CLIENT_ID: "34878fb5-d326-48b0-b4cf-269651f4b945"
+      ARM_TENANT_ID: "49d9d716-d5ad-40fa-9707-f8d27b7cd8c8"
+      ARM_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
+      ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Azure Login
+      - name: Azure Login (Client Secret Authentication)
         uses: azure/login@v2
         with:
-          client-id: "34878fb5-d326-48b0-b4cf-269651f4b945"
-          tenant-id: "49d9d716-d5ad-40fa-9707-f8d27b7cd8c8"
-          subscription-id: "990d8adf-a227-429c-918d-352714086c0e"
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+        continue-on-error: true
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3

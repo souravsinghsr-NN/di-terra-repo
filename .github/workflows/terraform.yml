@@ -41,7 +41,7 @@ jobs:
       - name: Azure Login
         uses: azure/souravsinghsr@b18g13.online
         with:
-          client-id: ${{ 34878fb5-d326-48b0-b4cf-269651f4b945 }}
+          client-id: ${{ 7c315be9-548d-4653-a84a-f9d0d118148e }}
           tenant-id: ${{ 49d9d716-d5ad-40fa-9707-f8d27b7cd8c8 }}
           subscription-id: ${{ 990d8adf-a227-429c-918d-352714086c0e }}
 

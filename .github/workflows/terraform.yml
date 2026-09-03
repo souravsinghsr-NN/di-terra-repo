@@ -35,10 +35,10 @@ jobs:
         working-directory: ./Envorment/Preprod
 
     env:
-      ARM_CLIENT_ID: "34878fb5-d326-48b0-b4cf-269651f4b945"
-      ARM_TENANT_ID: "49d9d716-d5ad-40fa-9707-f8d27b7cd8c8"
-      ARM_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
-      ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID || '990d8adf-a227-429c-918d-352714086c0e' }}
+      ARM_CLIENT_ID: "24415f87-2a75-42e3-99b1-a2496cc41e34"
+      ARM_TENANT_ID: "0e377ded-2dd9-49f9-8462-c338e29ba6d6"
+      ARM_CLIENT_SECRET: "ce73c812-e469-4ef3-a161-ce76d32c8f25"
+      ARM_SUBSCRIPTION_ID: "990d8adf-a227-429c-918d-352714086c0e"
 
     steps:
       - name: Checkout Code
@@ -47,7 +47,7 @@ jobs:
       - name: Azure Login
         uses: azure/login@v2
         with:
-          creds: '{"clientId":"34878fb5-d326-48b0-b4cf-269651f4b945","clientSecret":"${{ secrets.AZURE_CLIENT_SECRET }}","subscriptionId":"990d8adf-a227-429c-918d-352714086c0e","tenantId":"49d9d716-d5ad-40fa-9707-f8d27b7cd8c8"}'
+          creds: '{"clientId":"24415f87-2a75-42e3-99b1-a2496cc41e34","clientSecret":"Asi8Q~dLXWy3N66y41gyE7ytY9jB~UNaa0tWbcxp","subscriptionId":"990d8adf-a227-429c-918d-352714086c0e","tenantId":"0e377ded-2dd9-49f9-8462-c338e29ba6d6"}'
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3

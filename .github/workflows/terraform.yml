@@ -37,7 +37,7 @@ jobs:
     env:
       ARM_CLIENT_ID: "59e66189-b347-4e8e-8c4f-7a2a144145d4"
       ARM_TENANT_ID: "49d9d716-d5ad-40fa-9707-f8d27b7cd8c8"
-      ARM_CLIENT_SECRET: "ce73c812-e469-4ef3-a161-ce76d32c8f25"
+      ARM_CLIENT_SECRET: "kJR8Q~j4XijQm5Vzk0eyFeXyr1FDY1Xp~rQzHa6F"
       ARM_SUBSCRIPTION_ID: "990d8adf-a227-429c-918d-352714086c0e"
 
     steps:

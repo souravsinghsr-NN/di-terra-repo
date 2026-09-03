@@ -35,8 +35,8 @@ jobs:
         working-directory: ./Envorment/Preprod
 
     env:
-      ARM_CLIENT_ID: "24415f87-2a75-42e3-99b1-a2496cc41e34"
-      ARM_TENANT_ID: "0e377ded-2dd9-49f9-8462-c338e29ba6d6"
+      ARM_CLIENT_ID: "59e66189-b347-4e8e-8c4f-7a2a144145d4"
+      ARM_TENANT_ID: "49d9d716-d5ad-40fa-9707-f8d27b7cd8c8"
       ARM_CLIENT_SECRET: "ce73c812-e469-4ef3-a161-ce76d32c8f25"
       ARM_SUBSCRIPTION_ID: "990d8adf-a227-429c-918d-352714086c0e"
 

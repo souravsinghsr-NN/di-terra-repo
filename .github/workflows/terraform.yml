@@ -47,7 +47,7 @@ jobs:
       - name: Azure Login
         uses: azure/login@v2
         with:
-          creds: '{"clientId":"59e66189-b347-4e8e-8c4f-7a2a144145d4","clientSecret":"YOUR_NEW_SECRET_VALUE","subscriptionId":"990d8adf-a227-429c-918d-352714086c0e","tenantId":"49d9d716-d5ad-40fa-9707-f8d27b7cd8c8"}'
+          creds: '{"clientId":"59e66189-b347-4e8e-8c4f-7a2a144145d4","kJR8Q~j4XijQm5Vzk0eyFeXyr1FDY1Xp~rQzHa6F":"YOUR_NEW_SECRET_VALUE","subscriptionId":"990d8adf-a227-429c-918d-352714086c0e","tenantId":"49d9d716-d5ad-40fa-9707-f8d27b7cd8c8"}'
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
